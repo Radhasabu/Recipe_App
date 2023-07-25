@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.header{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+    .layer{
+        background-color: rgba(0,0,0,0.5);
+    }
+    
+    .logo-wrapper{
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+    
+        .logo{
+            border: 5px solid #fff;
+            border-radius: 100%;
+            padding: 12px;
+            .brand{
+                color: white;
+            }
+        }
+    }
+    .header-text{
+        display: block;
+        text-align: center;
+        padding: 50px;
+        h1{
+            color: #fff;
+            padding-bottom: 10px;
+        }
+        p{
+            color: white;
+
+        }
+        
+    }
+}
+
+.recipeHeading{
+    color: rgb(101, 210, 174);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    .tablist{
+        width: 120px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        position: relative;
+        cursor: pointer;
+        svg{
+            font-size: 40px;
+        }
+    
+        span{
+            font-size: 15px;
+        }
+    
+        &.active{
+            background-color: rgb(101, 210, 174);
+    
+            svg{
+                color: white;
+            }
+            span{
+                color: white;
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                border-top: 20px solid rgb(101, 210, 174);
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                bottom: -18px;
+            }
+        }
+    }
+    
+}
+
+.recipe_banner{
+    background-color: rgb(26, 69, 91);
+    color: #fff;
+    display: flex;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top-left-radius: 50px;
+    margin-bottom: 70px;
+    .left-col{
+        width: 50%;
+        padding-left: 20px;
+        .badge{
+            font-size: 20px;
+            background-color: rgb(101, 210, 174) ;
+            padding: 5px;
+            border-top-left-radius: 4px;
+        }
+        h1{
+            font-size: 25px;
+            font-weight: bold;
+            gap:2px
+        }
+        p{
+            strong{
+                margin-right:5px ;
+            }
+            font-size: 1rem;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            gap:10px;
+            li{
+                padding-right: 20px;
+            }
+        }
+       
+    }
+
+    .right-col{
+        width: 50%;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .image-wrapper{
+            height: 350px;
+            width: 350px;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+
+.heading-line{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(101, 210, 174);
+    margin-bottom: 30px;
+    input{
+        margin-top: 10px;
+        width: 80%;
+        height: 40px;
+        border: none ;
+        outline: none;
+        border-radius: 8px 0 0 8px;
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    button{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        :hover{
+            color: rgb(101, 210, 174);
+            font-size: 25px;
+            font-weight: bold;
+            opacity: inherit;
+        }
+    }
+}
+
+.flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+    text-align: center;
+    box-shadow: 10px solid gray;
+    margin-bottom: 30px;
+    .flexItem{
+        background-color: #f2f2f2;
+        border-radius: 6px;
+        overflow: hidden;
+        width: calc(100% / 4 - 20px);
+
+        .img-wrapper{
+            margin-bottom: 10px;
+            .img-button{
+                cursor: pointer;
+                border: none;
+                outline: none;
+                img{
+                    width: 100%;
+
+                    &:hover{
+                        height:250px;
+                        width: 300px;
+                    }
+                }
+            }
+                
+           
+        }
+
+        p{
+            color:rgb(26, 69, 91) ;
+            padding: 0 15px;
+        }
+    }
+    // Link{
+    //     .flexItem{
+    //         background-color: #f2f2f2;
+    //         border-radius: 6px;
+    //         overflow: hidden;
+    //         width: calc(100% / 4 - 20px);
+    
+    //         .img-wrapper{
+    //             margin-bottom: 10px;
+    //                 img{
+    //                     width: 100%;
+    
+    //                     &:hover{
+    //                         height:250px;
+    //                         width: 300px;
+    //                     }
+    //                 }
+               
+    //         }
+    
+    //         p{
+    //             color:rgb(26, 69, 91) ;
+    //             padding: 0 15px;
+    //         }
+    //     }
+    // }
+}
+
+.loader{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+
+    .spinner{
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid rgb(101, 210, 174);
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        animation: spin 2s linear infinite;
+    }
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+
